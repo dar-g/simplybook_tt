@@ -1,0 +1,183 @@
+/*COLORS*/
+/*MIXINS*/
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 1280px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: calc(100% - 20px);
+  margin: 10px;
+  box-shadow: 0 0 10px #000000;
+  background-color: #ffffff;
+}
+.card__img-box {
+  position: relative;
+  padding-bottom: 56%;
+}
+.card__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.card__content-box {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100px;
+  height: 275px;
+  overflow: hidden;
+}
+.card__text-box {
+  height: 30%;
+  padding: 15px;
+}
+.card__title {
+  font-size: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+}
+.card__text-wrap {
+  height: 70px;
+  padding: 0 15px;
+}
+.card__fixed-bg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70%;
+}
+.card_fixed-bg-gradient {
+  background: linear-gradient(transparent, #ffffff 10%);
+}
+.card__link {
+  position: absolute;
+  top: -3px;
+  right: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #048B7B;
+  padding: 3px 0 3px 13px;
+  background-color: #ffffff;
+  z-index: 2;
+}
+.card .characteristics {
+  position: relative;
+  top: 20%;
+  display: flex;
+  flex-direction: row;
+  padding: 0 15px;
+  margin-bottom: 15px;
+}
+.card .characteristics .tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: 62px;
+  padding: 5px 15px;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #ffffff;
+  z-index: 3;
+}
+.card .characteristics .tooltip__text {
+  font-size: 0.8em;
+}
+.card .characteristics .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: calc(50% - 10px);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(0, 0, 0, 0.9);
+}
+.card .characteristics__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+}
+.card .characteristics__item:hover .tooltip {
+  visibility: visible;
+}
+.card .characteristics__icon {
+  width: 25px;
+  height: 25px;
+  background-color: #048B7B;
+  margin-bottom: 10px;
+}
+.card .location {
+  position: absolute;
+  top: 55%;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 90%;
+  margin-left: 15px;
+}
+.card .location__name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.card .location__icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+.card .location__icon svg {
+  width: 20px;
+}
+.card .button-wrapper {
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.card .button-wrapper .select-button {
+  font-size: 16px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #048B7B;
+  color: #ffffff;
+}
+.card .button-wrapper .select-button:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 640px) {
+  .card {
+    width: calc(50% - 20px);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card {
+    width: calc(33.3% - 20px);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .card {
+    width: calc(25% - 20px);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

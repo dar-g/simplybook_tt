@@ -1,0 +1,23 @@
+// VARIABLES
+$outer-margin: 10px;
+
+// FONT SIZE
+$font-large: 20px;
+$font-medium: 18px;
+$font-small: 16px;
+
+/*COLORS*/
+$white: #ffffff;
+$black: #000000;
+$grey: #858585;
+$turquoise: #048B7B;
+
+/*MIXINS*/
+@mixin border-box {
+	box-sizing: border-box;
+}
+@mixin text-ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
